@@ -1,20 +1,6 @@
 from abc import ABC, abstractmethod
+
 class IAccount(ABC):
-
-    @property
-    @abstractmethod
-    def account_number(self):
-        pass
-
-    @property
-    @abstractmethod
-    def account_holder(self):
-        pass
-
-    @property
-    @abstractmethod
-    def balance(self):
-        pass
 
     @abstractmethod
     def deposit(self, amount):
@@ -25,5 +11,10 @@ class IAccount(ABC):
         pass
 
     @abstractmethod
-    def get_balance(self):
+    def calculate_interest(self):
+        pass
+
+    @property
+    @abstractmethod
+    def balance(self):
         pass
